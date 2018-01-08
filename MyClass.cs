@@ -2,6 +2,9 @@
 
 namespace DynProxy
 {
+    /// <summary>
+    /// Zkušební třída pro proxy
+    /// </summary>
     public class MyClass
     {
         public virtual bool Flag { get; set; }

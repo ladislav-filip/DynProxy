@@ -3,10 +3,18 @@ using Castle.DynamicProxy;
 
 namespace DynProxy
 {
+    /// <summary>
+    /// Obalující proxy třída
+    /// </summary>
     public class Interceptor : IInterceptor
     {
+        /// <summary>
+        /// Metoda je vyvolána před každým voláním metody v originální třídě
+        /// </summary>
+        /// <param name="invocation"></param>
         public void Intercept(IInvocation invocation)
         {
+            // pokud jsou volány vlastnosti, tak jde o metody typy "set_Xxx"
             Console.WriteLine($"Before target call {invocation.Method.Name}");
             try
             {
